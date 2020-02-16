@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fCC - Build a Survey Form</title>
+</head>
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <h1 id="title">My survey form</h1>
+    <p id="description">Dear visitor, thank you so much for your time!</p>
+    <form id="survey-form">
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Please enter your full name" required>
+        <label for="email" id="email-label">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Your email address" required>
+        <label for="number" id="number-label">How much do you mark my website?</label>
+        <input type="number" name="number" id="number" min="1" max="10" placeholder="Between 1 and 10">
+        <label for="dropdown">Choose your favorite OS/Distro:</label>
+        <select name="pets" id="dropdown">
+            <optgroup label="Linux">
+                <option value="">--Please choose an option--</option>
+                <option value="arch">Arch Linux</option>
+                <option value="centos">CentOS</option>
+                <option value="debian">Debian</option>
+                <option value="fedora">Fedora</option>
+                <option value="parabola">Parabola</option>
+                <option value="trisquel">Trisquel</option>
+                <option value="ubuntu">Ubuntu</option>
+            </optgroup>
+            <optgroup label="BSD">
+                <option value="freebsd">FreeBSD</option>
+                <option value="netbsd">NetBSD</option>
+                <option value="openbsd">OpenBSD</option>
+            </optgroup>
+            <optgroup label="Proprietary">
+                <option value="Windows">Windows</option>
+                <option value="MacOS">MacOS</option>
+            </optgroup>
+        </select>
+        <fieldset>
+            <legend>Select your favorite smartphone OS</legend>
+            <input type="radio" id="android" name="mobileos" value="android" checked>
+            <label for="android">Android</label>
+            <input type="radio" id="ios" name="mobileos" value="ios">
+            <label for="ios">iOS (iPhone)</label>
+            <input type="radio" id="others" name="mobileos" value="others">
+            <label for="others">Others</label>
+        </fieldset>
+        <fieldset>
+            <legend>Select your interests</legend>
+            <input type="checkbox" id="development" name="interest" value="development">
+            <label for="development">Development</label>
+            <input type="checkbox" id="linux" name="interest" value="linux">
+            <label for="linux">Linux</label>
+            <input type="checkbox" id="opensource" name="interest" value="opensource">
+            <label for="opensource">Open Source</label>
+            <input type="checkbox" id="sysadmin" name="interest" value="sysadmin">
+            <label for="sysadmin">System Administration</label>
+        </fieldset>
+        <label for="text1">Leave a message:</label>
+        <textarea id="text1" name="massage" placeholder="Please, leave a message, your feedback or your additional comments. Thank you!"></textarea>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+</html>
