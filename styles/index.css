@@ -1,0 +1,16 @@
+.box-container {
+    display: flex;
+    width: 70%;
+    max-width: initial;
+    flex-direction: column;
+    background-color: white;
+    align-items: stretch;
+}
+
+.box {
+    width: 100%;
+}
+.box input, textarea {
+    width: 100%;
+    max-width: initial;
+}
