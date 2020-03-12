@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,81 +8,105 @@
     <title>fCC - Build a Survey Form</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <h1 id="title">My survey form</h1>
-    <p id="description">Dear visitor, thank you so much for your time!</p>
-    <div class="box-container">
+    <div class="background">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>  
+    <div class="outerbox-container">
+    <div class="head">
+        <h1 id="title">My survey form</h1>
+        <p id="description">Dear visitor, thank you so much for your time!</p>
+    </div>
     <form id="survey-form" action="https://formsubmit.co/1f96f8eb1db7b7235245453863aaabc8" method="POST">
-        <div class="box">
-            <label for="name" id="name-label">Name:</label>
-            <input type="text" name="name" id="name" placeholder="Please enter your full name" required>
-        </div>
-        <div class="box">
-            <label for="email" id="email-label">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Your email address" required>
-        </div>
-        <div>
-            <label for="number" id="number-label">How much do you mark my website?</label>
-            <input type="number" name="number" id="number" min="1" max="10" placeholder="Between 1 and 10">
-        </div>
-        <div>
-            <label for="dropdown">Choose your favorite OS/Distro:</label>
-            <select name="pets" id="dropdown">
-            <option value="">--Please choose an option--</option>
-            <optgroup label="Linux">
-                <option value="arch">Arch Linux</option>
-                <option value="centos">CentOS</option>
-                <option value="debian">Debian</option>
-                <option value="fedora">Fedora</option>
-                <option value="mint">Linux Mint</option>
-                <option value="parabola">Parabola</option>
-                <option value="trisquel">Trisquel</option>
-                <option value="ubuntu">Ubuntu</option>
-            </optgroup>
-            <optgroup label="BSD">
-                <option value="freebsd">FreeBSD</option>
-                <option value="netbsd">NetBSD</option>
-                <option value="openbsd">OpenBSD</option>
-            </optgroup>
-            <optgroup label="Proprietary">
-                <option value="Windows">Windows</option>
-                <option value="MacOS">MacOS</option>
-            </optgroup>
-            </select>
-        </div>
-        <div>
-            <fieldset>
-                <legend>Select your favorite smartphone OS</legend>
-                <input type="radio" id="android" name="mobileos" value="android" checked>
-                <label for="android">Android</label>
-                <input type="radio" id="ios" name="mobileos" value="ios">
-                <label for="ios">iOS (iPhone)</label>
-                <input type="radio" id="others" name="mobileos" value="others">
-                <label for="others">Others</label>
+        <div class="box-container">
+            <div class="form-box">
+                <label for="name" id="name-label">Name:</label>
+                <input class="form-item" type="text" name="name" id="name" placeholder="Please enter your full name"
+                    required>
+            </div>
+            <div class="form-box">
+                <label for="email" id="email-label">Email:</label>
+                <input class="form-item" type="email" name="email" id="email" placeholder="Your email address" required>
+            </div>
+            <div class="form-box">
+                <label for="number" id="number-label">How much do you mark my website?</label>
+                <input class="form-item" type="number" name="number" id="number" min="1" max="10"
+                    placeholder="Between 1 and 10">
+            </div>
+            <div class="form-box">
+                <label for="dropdown">Choose your favorite OS/Distro:</label>
+                <select class="form-item" name="preferredOS" id="dropdown">
+                    <option value="">--Please choose an option--</option>
+                    <optgroup label="Linux">
+                        <option value="arch">Arch Linux</option>
+                        <option value="centos">CentOS</option>
+                        <option value="debian">Debian</option>
+                        <option value="fedora">Fedora</option>
+                        <option value="mint">Linux Mint</option>
+                        <option value="parabola">Parabola</option>
+                        <option value="trisquel">Trisquel</option>
+                        <option value="ubuntu">Ubuntu</option>
+                    </optgroup>
+                    <optgroup label="BSD">
+                        <option value="freebsd">FreeBSD</option>
+                        <option value="netbsd">NetBSD</option>
+                        <option value="openbsd">OpenBSD</option>
+                    </optgroup>
+                    <optgroup label="Proprietary">
+                        <option value="Windows">Windows</option>
+                        <option value="MacOS">MacOS</option>
+                    </optgroup>
+                </select>
+            </div>
+            <fieldset class="form-box">
+                <legend class="center-item">Select your favorite smartphone OS</legend>
+                <div class="form-buttons">
+                    <div>
+                        <input type="radio" id="android" name="mobileos" value="android" checked>
+                        <label for="android">Android</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="ios" name="mobileos" value="ios">
+                        <label for="ios">iOS (iPhone)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="others" name="mobileos" value="others">
+                        <label for="others">Others</label>
+                    </div>
+                </div>
             </fieldset>
-        </div>
-        <div>
-            <fieldset>
-                <legend>Select your interests</legend>
-                <input type="checkbox" id="development" name="interest" value="development">
-                <label for="development">Development</label>
-                <input type="checkbox" id="linux" name="interest" value="linux">
-                <label for="linux">Linux</label>
-                <input type="checkbox" id="opensource" name="interest" value="opensource">
-                <label for="opensource">Open Source</label>
-                <input type="checkbox" id="sysadmin" name="interest" value="sysadmin">
-                <label for="sysadmin">System Administration</label>
+            <fieldset class="form-box">
+                <legend class="center-item">Select your interests</legend>
+                <div class="form-buttons">
+                    <div>
+                        <input type="checkbox" id="development" name="interest" value="development">
+                        <label for="development">Development</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="linux" name="interest" value="linux">
+                        <label for="linux">Linux</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="opensource" name="interest" value="opensource">
+                        <label for="opensource">Open Source</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sysadmin" name="interest" value="sysadmin">
+                        <label for="sysadmin">System Administration</label>
+                    </div>
+                </div>  
             </fieldset>
-        </div>
-        <div>
+        <div class="form-box form-box--center">
             <label for="text1" hidden>Leave a message:</label>
-            <textarea id="text1" name="massage" placeholder="Please, leave a message, your feedback or your additional comments. Thank you!"></textarea>
+            <textarea class="textarea" id="text1" name="massage" maxlength="300" rows="5"
+                placeholder="Please, leave a message, your feedback or your additional comments. Thank you!"></textarea>
         </div>
-        <div>
-            <input type="submit" id="submit" value="Submit">
+        <div class="form-box form-box--center">
+            <input class="button" type="submit" id="submit" value="Submit">
         </div>
     </form>
-    </div>
+</div>
+</div>
+</div>
 </body>
 </html>
